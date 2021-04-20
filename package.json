@@ -1,0 +1,19 @@
+{
+  "name": "mrv_calculator",
+  "version": "1.0.0",
+  "description": "A simple tool to calculate an athlete's MRV.",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColinPelkmans/MRV_calculator.git"
+  },
+  "author": "Colin Pelkmans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ColinPelkmans/MRV_calculator/issues"
+  },
+  "homepage": "https://github.com/ColinPelkmans/MRV_calculator#readme"
+}
