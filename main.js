@@ -1,47 +1,63 @@
-function personPrompt(query) {
+function athleteInfoPrompt(query) {
   const readline = require("readline").createInterface({
     input: process.stdin,
     output: process.stdout
-  })
+  });
 
   return  new Promise(resolve => readline.question(query, ans => {
   readline.close();
   resolve(ans);
-}))
+  }));
 }
 
-var person = [];
+var athleteInfo = new Object();
 
 async function main() {
+  var gender = await athleteInfoPrompt("What is your gender? (M/F) ");
+  athleteInfo.gender = gender;
 
- var gender = await personPrompt("What is your gender? (M/F) ")
- person.push(gender);
+  var weight = await athleteInfoPrompt("How much do you weigh? (Kg) ");
+  athleteInfo.weight = weight;
 
- var age = await personPrompt("How old are you? ")
- person.push(age);
+  var height = await athleteInfoPrompt("How tall are you? (cm) ");
+  athleteInfo.height = height;
 
- var diet = await personPrompt("How good is your diet? ")
- person.push(diet);
+  // var strength = await athleteInfoPrompt("Strength: Class IV-III / Class II-I / Master-Elite / Intl Elite ");
+  // athleteInfo.strength = strength;
 
- var experience = await personPrompt("How much experience do you have? ")
- person.push(experience);
+  // var experience = await athleteInfoPrompt("Experience: <4 years / 4-8 years / 8-12 years / 12+ years ");
+  // athleteInfo.experience = experience;
 
- var height = await personPrompt("How tall are you? ")
- person.push(height);
+  // var age = await athleteInfoPrompt("How old are you? ");
+  // athleteInfo.age = age;
 
- var sleep = await personPrompt("How much sleep do you get each night? ")
- person.push(sleep);
+  // var diet = await athleteInfoPrompt("Diet: Poor / Average / Good ");
+  // athleteInfo.diet = diet;
 
- var stress = await personPrompt("How much stress do you have outside of training? ")
- person.push(stress);
+  // var sleep = await athleteInfoPrompt("How much sleep do you get each night? ");
+  // athleteInfo.sleep = sleep;
 
- var weight = await personPrompt("How much do you weigh? (Kg) ")
- person.push(weight);
+  // var stress = await athleteInfoPrompt("Stress: High / Medium / Low ");
+  // athleteInfo.stress = stress;
 
- var recovery = await personPrompt("How good is your ability to recover? ")
- person.push(recovery);
+  // var recovery = await athleteInfoPrompt("Recovery: Poor / Below average / Average / Good / Exceptional ");
+  // athleteInfo.recovery = recovery;
 
- console.log(person)
+  // var squat = await athleteInfoPrompt("What is your max squat? (Kg) ");
+  // athleteInfo.squat = squat;
+
+  // var bench = await athleteInfoPrompt("What is your max bench? (Kg) ");
+  // athleteInfo.bench = bench;
+
+  // var deadlift = await athleteInfoPrompt("What is your max deadlift? (Kg) ");
+  // athleteInfo.deadlift = deadlift;
+  
+  const calculator = require('./src/mrvCalculator')
+  let calc = new calculator;
+  calc.calculate()
+//  console.log(athleteInfo);
 }
 
 main()
+
+module.exports = athleteInfo;
