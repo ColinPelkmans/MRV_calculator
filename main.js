@@ -13,7 +13,7 @@ function athleteInfoPrompt(query) {
 var athleteInfo = new Object();
 
 async function main() {
-  var gender = await athleteInfoPrompt("What is your gender? (M/F) ");
+  var gender = await athleteInfoPrompt("What is your gender? (Male / Female) ");
   athleteInfo.gender = gender;
 
   var weight = await athleteInfoPrompt("How much do you weigh? (Kg) ");
@@ -22,26 +22,26 @@ async function main() {
   var height = await athleteInfoPrompt("How tall are you? (cm) ");
   athleteInfo.height = height;
 
-  // var strength = await athleteInfoPrompt("Strength: Class IV-III / Class II-I / Master-Elite / Intl Elite ");
-  // athleteInfo.strength = strength;
+  var age = await athleteInfoPrompt("How old are you? ");
+  athleteInfo.age = age;
 
-  // var experience = await athleteInfoPrompt("Experience: <4 years / 4-8 years / 8-12 years / 12+ years ");
-  // athleteInfo.experience = experience;
+  var experience = await athleteInfoPrompt("Experience: Beginner / Intermediate / Advanced / Very Advanced ");
+  athleteInfo.experience = experience;
 
-  // var age = await athleteInfoPrompt("How old are you? ");
-  // athleteInfo.age = age;
+  var strength = await athleteInfoPrompt("Strength: Low / Moderate / High / Very High ");
+  athleteInfo.strength = strength;
 
-  // var diet = await athleteInfoPrompt("Diet: Poor / Average / Good ");
-  // athleteInfo.diet = diet;
+  var diet = await athleteInfoPrompt("Diet: Poor / Average / Good ");
+  athleteInfo.diet = diet;
 
-  // var sleep = await athleteInfoPrompt("How much sleep do you get each night? ");
-  // athleteInfo.sleep = sleep;
+  var sleep = await athleteInfoPrompt("How much sleep do you get each night? ");
+  athleteInfo.sleep = sleep;
 
-  // var stress = await athleteInfoPrompt("Stress: High / Medium / Low ");
-  // athleteInfo.stress = stress;
+  var stress = await athleteInfoPrompt("Stress: High / Medium / Low ");
+  athleteInfo.stress = stress;
 
-  // var recovery = await athleteInfoPrompt("Recovery: Poor / Below average / Average / Good / Exceptional ");
-  // athleteInfo.recovery = recovery;
+  var recovery = await athleteInfoPrompt("Recovery: Poor / Below Average / Average / Good / Exceptional ");
+  athleteInfo.recovery = recovery;
 
   // var squat = await athleteInfoPrompt("What is your max squat? (Kg) ");
   // athleteInfo.squat = squat;
